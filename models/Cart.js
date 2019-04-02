@@ -36,10 +36,15 @@ class Cart {
 				callback();
 			});
 		});
-		
-
-		
-
+	}
+	static getCart(callback) {
+		fs.readFile(p, (err, fileContent) => {
+			let cart = {products: [], totalPrice: 0}
+			if(!err) {
+				cart = JSON.parse(fileContent);
+			}
+			callback(cart);
+		});
 	}
 }
 

@@ -11,3 +11,6 @@ block content
 					| Prix: 
 					span.badge.badge-pill.badge-dark #{product.price}€
 				hr
+				form(action="/ajouter-au-panier", method="POST")
+					input(type="hidden", name="productId", value=product.id)
+					button(type="submit").btn.btn-outline-dark.btn-sm ajouter au panier

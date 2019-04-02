@@ -21,9 +21,32 @@ const getProductDetails = (req, res) => {
 }
 
 const getCart = (req,res) => {
-	res.render('cart', {
-		title: "Panier",
-		path: '/panier'
+	Cart.getCart(cart => {
+		if(cart.products.length > 0) {
+			Product.findAll(products => {
+				let cartProducts = [];
+	
+				products.forEach(product => {
+					const productData = cart.products.find(prod => prod.id === product.id)
+					if(productData) {
+						cartProducts.push({product: product, qty: productData.qty})
+					}
+				});
+				res.render('cart', {
+					title: "Panier",
+					path: '/panier',
+					cartProducts: cartProducts,
+					totalPrice: cart.totalPrice,
+					hasProducts: true
+				});
+			});
+		} else {
+			res.render('cart', {
+				title: "Panier",
+				path: '/panier',
+				hasProducts: false
+			});
+		}
 	});
 }
 

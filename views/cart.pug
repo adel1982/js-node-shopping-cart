@@ -1,5 +1,24 @@
 extends layout
 
 block content
-	.jumbotron
-		h1.display-4 Votre panier est vide
+	if hasProducts
+		h2 Prix total : #{totalPrice}€
+		table.table.table-striped
+			thead
+				tr
+					th(scope='col') Nom
+					th(scope='col') Image
+					th(scope='col') Prix
+					th(scope='col') Quantité
+			tbody
+				each cartProduct in cartProducts
+					tr 
+						td= cartProduct.product.name
+						td
+							a(href="/produit/"+cartProduct.product.id)
+								img(src=cartProduct.product.image, alt=cartProduct.product.name, width="140")
+						td #{cartProduct.product.price}€
+						td= cartProduct.qty
+	else 
+		.jumbotron
+			h1.display-4 Votre panier est vide
