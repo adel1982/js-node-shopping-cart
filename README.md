@@ -1,7 +1,7 @@
-# js-node-todo-soupline
-Panier d'achat - https://js-node-shopping-cart.herokuapp.com/
+# Shopping cart 
 
-## Technologie(s) utilisée(s)
-- HTML / CSS / JS
-- Node JS 
-
+## Used Technologys
+- HTML / CSS / JS Vanilla
+- NODE JS
+- PUG
+- YARN

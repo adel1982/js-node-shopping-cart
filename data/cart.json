@@ -1,1 +1,13 @@
-{"products":[{"id":"111a49a0-0de8-11e9-abfd-918adfab5e0c","qty":2},{"id":"17728250-0a2c-11e9-ac38-c34e476dff32","qty":2}],"totalPrice":1000}
+{
+	"products": [
+		{
+			"id": "111a49a0-0de8-11e9-abfd-918adfab5e0c",
+			"qty": 2
+		},
+		{
+			"id": "17728250-0a2c-11e9-ac38-c34e476dff32",
+			"qty": 2
+		}
+	],
+	"totalPrice": 1000
+}
