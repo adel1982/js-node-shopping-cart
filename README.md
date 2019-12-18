@@ -2,7 +2,7 @@
 
 ## Used Technologys
 - HTML / CSS / JS Vanilla
-- NODE JS
-- PUG
-- YARN
+- Node JS
+- Pug
+- Yarn
 
